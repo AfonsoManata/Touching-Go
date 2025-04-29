@@ -1,6 +1,4 @@
-# Touching-Go
-
-# Learning Go 🐹
+# Learning Go 🦕
 
 Welcome to my Go (Golang) learning repository!  
 This repo contains basic code examples, notes, and exercises as I explore the Go programming language.
