@@ -20,7 +20,7 @@ type UserData struct {
 	numberOfTickets uint
 }
 
-// Go routines?
+// Important for main thread wait for the other threads 
 var wg = sync.WaitGroup{}
 
 func main() {
@@ -35,7 +35,8 @@ func main() {
 
 		bookTicket(userTickets, firstName, lastName, email)
 
-		wg.Add(1)
+		wg.Add(1) // Adds the number of threads it need to wait 
+		// This make a separated thread
 		go sendTicket(userTickets, firstName, lastName, email)
 
 		firstNames := getFirstNames()
